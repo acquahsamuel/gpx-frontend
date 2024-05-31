@@ -1,0 +1,67 @@
+<div class="main-wrapper">
+	<mat-drawer-container class="dashboard-container" autosize>
+    <mat-toolbar>
+		<div class="mat-toolbar-content">
+			<div class="mat-toolbar-nav-left">
+				<div class="dashboard-sidenav-content">
+
+					<div class>
+						<button (click)="drawer.toggle()"
+							type="button"
+							mat-button>
+							<mat-icon aria-hidden="false"
+								class="menu-icon"
+								aria-label="Example home icon">
+								menu
+							</mat-icon>
+						</button>
+					</div>
+				</div>
+				<span>Gemini Gov't</span>
+			</div>
+
+			<div class="mat-toolbar-nav-right">
+				<div class="image-container">
+					<img [src]="userProfile"
+						class="user-image"
+						alt="profile image">
+					<button [matMenuTriggerFor]="menu"
+						mat-button
+						class="user-title">
+						{{ username }}
+						<mat-icon>keyboard_arrow_down</mat-icon>
+					</button>
+					<mat-menu #menu="matMenu">
+						<button (click)="logout()"
+							mat-menu-item>
+							Logout
+							<mat-icon>power_settings_new</mat-icon>
+						</button>
+					</mat-menu>
+				</div>
+			</div>
+		</div>
+  </mat-toolbar>
+
+		<mat-drawer #drawer
+			class="dashboard-sidenav"
+			mode="side"
+			opened>
+
+			<div class="sidebar-wrapper">
+				<div *ngFor="let link of links" class="link-container"	routerLinkActive="div-active">	
+          <p>{{ link.day }}</p>
+					<a *ngFor="let text of link.promptMessages" 	class="nav-link"	routerLinkActive="active">
+						{{ text }}
+					</a>
+				</div>
+			</div>
+		</mat-drawer>
+
+		 
+			<div class="container">
+				<router-outlet></router-outlet>
+			</div>
+	 
+	</mat-drawer-container>
+</div>

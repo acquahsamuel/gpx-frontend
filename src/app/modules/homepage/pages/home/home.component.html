@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+
+<mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+
+<section class="main-content">
+  <div class="container">
+    <div class="main-body">
+      <div class="sidebar">
+        <ul class="category-lists">
+          <p>Category</p>
+          <app-sidebar> </app-sidebar>
+          <br />
+          <h4>Job Types</h4>
+          <app-job-types> </app-job-types>
+
+
+          
+
+        </ul>
+      </div>
+
+      <div class="main-content-listing">
+        <div class="main-content-listing-cta">
+          <h3>Browse remote job listings from all accross the web</h3>
+          <p>
+            We surf the internet to find remote working opporunities and then
+            display them here on one convenient place
+          </p>
+        </div>
+        <h3 class="title">New Remote jobs</h3>
+        <div class="jobs-listings">
+          <a *ngFor="let job of jobListings.data">
+            <div class="main-content-listings">
+              <div class="listings-title">
+                <h3>{{ job.position }}</h3>
+                <p>{{ job.title }}</p>
+              </div>
+              <div class="listings-cta">
+                <p>{{ job.jobType }}</p>
+                <button class="btn btn-dark" (click)="getJobDetails(job.id)">
+                  View
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <section class="footer-bottom">
+          <app-subscriber-footer></app-subscriber-footer>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <app-brand-footer></app-brand-footer> -->
