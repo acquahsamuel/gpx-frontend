@@ -150,9 +150,10 @@ mat-form-field {
 
 .inline-block-element {
   display: inline-block;
-  *display: inline; zoom: 1; /* for IE */
+  display: inline;
+   zoom: 1; /* for IE */
 
   font-size: 2000%;
   margin-left: -1px;
-  *margin-left: 0; /* for IE */
+  margin-left: 0; /* for IE */
 }
