@@ -49,7 +49,6 @@
 }
 
 .content-view-cover {
-  // background-color: green;
   margin-bottom: 5rem;
 }
 
@@ -259,11 +258,6 @@ span.material-symbols-rounded {
       }
     }
   }
-
-  // .interaction-page .content-view:last-child {
-  //   margin-bottom: 5rem;
-  //   background-color: red;
-  // }
 }
 
 @media screen and (min-width: 601px) {
@@ -286,6 +280,31 @@ span.material-symbols-rounded {
     padding: 10px 3px;
     justify-content: center;
     width: 58rem;
-    // border: 2px solid white;
+  }
+
+
+}
+
+
+.getting-started{
+  border: 1px solid greenyellow;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+
+
+  .getting-started-card{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .cards{
+       border: 1px solid greenyellow;
+       width: 25rem;
+    }
   }
 }

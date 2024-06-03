@@ -26,7 +26,6 @@
 						class="user-image"
 						alt="profile image">
 					<mat-menu #menu="matMenu">
-						
 						<a (click)="logout()" mat-menu-item>
 							<mat-icon> dashboard </mat-icon>
 							My Notes
@@ -47,7 +46,6 @@
 							<mat-icon>power_settings_new</mat-icon>
 							Logout
 						</a>
-
 					</mat-menu>
 				</div>
 			</div>
@@ -57,17 +55,12 @@
 		<mat-drawer #drawer
 			class="dashboard-sidenav"
 			mode="side"
-			>
+			opened="true">
 
-			<!-- <button (click)="drawer.toggle()"
-			type="button"
-			mat-button>
-			<mat-icon aria-hidden="false"
-				class="menu-icon"
-				aria-label="Example home icon">
-				menu
-			</mat-icon>
-		    </button> -->
+
+			<div class="header">
+				Header top 
+			</div>
 
 			<div class="sidebar-wrapper">
 				<div *ngFor="let link of links" class="link-container"	routerLinkActive="div-active">	
@@ -77,6 +70,11 @@
 					</a>
 				</div>
 			</div>
+
+            <div class="footer">
+				GPX Version 1
+			</div>
+
 		</mat-drawer>
 
 		 

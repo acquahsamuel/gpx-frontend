@@ -25,7 +25,7 @@ export class DashboardComponent implements OnInit {
     { 
       day : "Monday",
       promptMessages : [
-      "Software Engineer ", 
+      "First one Software Engineer ", 
       "The world is full ",
       "Chase your passions",
       "Software Engineer leads with code",
@@ -114,7 +114,7 @@ export class DashboardComponent implements OnInit {
         "Software Engineer collaborates across disciplines",
         "Software Engineer communicates through code",
         "Software Engineer problem-solves with logic",
-        "Software Engineer refines with iteration"
+        "Last one"
       ]
     }
   ];

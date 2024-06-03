@@ -2,7 +2,7 @@
 	<div class="interaction-page">
 
 		
-	   <div class="content-view-cover">
+	   <div class="content-view-cover" *ngIf="MESSAGE_ENGAGEMENT; else GETTING_STARTED">
 			<div class="content-view" *ngFor="let msg of MESSAGE_ENGAGEMENT">
 				<div class="message" >
 					<p>
@@ -29,7 +29,6 @@
 					<span class="send-btn"
 						(click)="sendMessage()"
 						>
-						<!-- <mat-icon>send</mat-icon> -->
 						<mat-icon>arrow_upward</mat-icon>
 						<!-- <mat-icon>stop</mat-icon> -->
 					</span>
@@ -40,3 +39,49 @@
 	</div>
 
 </section>
+
+
+
+<ng-template #GETTING_STARTED>
+	 <section class="getting-started">
+		 <div> Getting Started with GPX </div>
+
+		 <div class="getting-started-card"> 
+			 
+
+				<div class="cards">
+					 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, ipsam.</p>
+					 <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fugit nobis inventore! Corrupti voluptate magni laborum, sint doloribus provident distinctio?</div>
+				</div>
+
+				<div class="cards">
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, ipsam.</p>
+					<div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fugit nobis inventore! Corrupti voluptate magni laborum, sint doloribus provident distinctio?</div>
+			   </div>
+
+			   <div class="cards">
+				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, ipsam.</p>
+				<div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fugit nobis inventore! Corrupti voluptate magni laborum, sint doloribus provident distinctio?</div>
+		       </div>
+
+
+			   <div class="cards">
+				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, ipsam.</p>
+				<div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fugit nobis inventore! Corrupti voluptate magni laborum, sint doloribus provident distinctio?</div>
+		       </div>
+
+
+			   <div class="cards">
+				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, ipsam.</p>
+				<div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fugit nobis inventore! Corrupti voluptate magni laborum, sint doloribus provident distinctio?</div>
+		       </div>
+
+
+			   <div class="cards">
+				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, ipsam.</p>
+				<div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fugit nobis inventore! Corrupti voluptate magni laborum, sint doloribus provident distinctio?</div>
+		       </div>
+		 
+		 </div>
+	 </section>
+</ng-template>
