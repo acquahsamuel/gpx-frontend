@@ -1,86 +1,90 @@
 <div class="main-wrapper">
-	<mat-drawer-container class="dashboard-container" [hasBackdrop]="false" autosize>
-    <mat-toolbar>
-		<div class="mat-toolbar-content">
-			<div class="mat-toolbar-nav-left">
-				<div class="dashboard-sidenav-content">
+	<mat-drawer-container [hasBackdrop]="false"
+		class="dashboard-container"
+		autosize>
+		<mat-toolbar>
+			<div class="mat-toolbar-content">
+				<div class="mat-toolbar-nav-left">
+					<div class="dashboard-sidenav-content">
+						<div class>
+							<button (click)="drawer.toggle()"
+								type="button"
+								mat-button>
+								<mat-icon aria-hidden="false"
+									class="menu-icon"
+									aria-label="Example home icon">
+									menu
+								</mat-icon>
+							</button>
+						</div>
+					</div>
+					<!-- <span>GPX </span> -->
+				</div>
 
-					<div class>
-						<button (click)="drawer.toggle()"
-							type="button"
-							mat-button>
-							<mat-icon aria-hidden="false"
-								class="menu-icon"
-								aria-label="Example home icon">
-								menu
-							</mat-icon>
-						</button>
+				<div class="mat-toolbar-nav-right">
+					<div class="image-container">
+						<img [matMenuTriggerFor]="menu"
+							[src]="userProfile"
+							class="user-image"
+							alt="profile image">
+						<mat-menu #menu="matMenu">
+							<a (click)="logout()"
+								mat-menu-item>
+								<mat-icon>dashboard</mat-icon>
+								My Notes
+							</a>
+
+							<a (click)="logout()"
+								mat-menu-item>
+								<mat-icon>turned_in_not</mat-icon>
+								Customize ChatGPT
+							</a>
+
+							<a (click)="logout()"
+								mat-menu-item>
+								<mat-icon>settings</mat-icon>
+								Settings
+							</a>
+
+							<hr class="hr-r">
+							<a (click)="logout()"
+								mat-menu-item>
+								<mat-icon>power_settings_new</mat-icon>
+								Logout
+							</a>
+						</mat-menu>
 					</div>
 				</div>
-				<!-- <span>GPX </span> -->
 			</div>
-
-			<div class="mat-toolbar-nav-right">
-				<div class="image-container">
-					<img [matMenuTriggerFor]="menu" [src]="userProfile"
-						class="user-image"
-						alt="profile image">
-					<mat-menu #menu="matMenu">
-						<a (click)="logout()" mat-menu-item>
-							<mat-icon> dashboard </mat-icon>
-							My Notes
-						</a>
-
-						<a (click)="logout()" mat-menu-item> 
-							<mat-icon>turned_in_not</mat-icon>
-							Customize ChatGPT
-						</a>
-					
-						<a (click)="logout()" mat-menu-item> 
-							<mat-icon>settings</mat-icon>
-							Settings
-						</a>
-
-						<hr class="hr-r">
-						<a (click)="logout()" mat-menu-item> 
-							<mat-icon>power_settings_new</mat-icon>
-							Logout
-						</a>
-					</mat-menu>
-				</div>
-			</div>
-		</div>
-  </mat-toolbar>
+		</mat-toolbar>
 
 		<mat-drawer #drawer
 			class="dashboard-sidenav"
 			mode="side"
 			opened="false">
-
-
-			<div class="header">
-				 ChatGPX
-			</div>
-
+			<div class="header">ChatGPX</div>
 			<div class="sidebar-wrapper">
-				<div *ngFor="let link of links" class="link-container"	routerLinkActive="div-active">	
-                <p>{{ link.day }}</p>
-					<a *ngFor="let text of link.promptMessages" 	class="nav-link"	routerLinkActive="active">
+				<div *ngFor="let link of links"
+					class="link-container"
+					routerLinkActive="div-active">
+					<p>{{ link.day }}</p>
+					<a *ngFor="let text of link.promptMessages"
+						class="nav-link"
+						routerLinkActive="active">
 						{{ text }}
 					</a>
 				</div>
 			</div>
 
-            <div class="footer">
+			<div class="footer">
 				GPX v1.0 (acquahsamuel)
 			</div>
 
 		</mat-drawer>
 
-		 
-	<div class="container">
-		<router-outlet></router-outlet>
-	</div>
+		<div class="container">
+			<router-outlet></router-outlet>
+		</div>
 
 	</mat-drawer-container>
 </div>
