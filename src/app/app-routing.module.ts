@@ -19,7 +19,7 @@ const routes: Routes = [
   },
   {
     // canActivate: [AuthGuardService],
-    path: "account",
+    path: "interaction",
     loadChildren: () => import('./modules/dashboard/dashboard-routing.module')
       .then((m) => m.DashboardRoutingModule)
 

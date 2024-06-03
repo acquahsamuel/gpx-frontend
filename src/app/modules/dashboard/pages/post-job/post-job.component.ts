@@ -2,9 +2,9 @@ import { Component, OnInit } from "@angular/core";
 import { NotificationService } from "src/app/shared/services/notification.service";
 import { ActivatedRoute, Router } from "@angular/router";
 import {
-  FormBuilder,
+  UntypedFormBuilder,
   FormControl,
-  FormGroup,
+  UntypedFormGroup,
   Validators
 } from "@angular/forms";
 import { JobService } from "src/app/shared/services/job.service";
@@ -25,7 +25,7 @@ export class PostJobComponent implements OnInit {
   categoriesList = CategoriesList;
   categories = CategoriesList;
   // jobDescription : string = "";
-  postJobForm: FormGroup;
+  postJobForm: UntypedFormGroup;
 
   // Define static model
   // Refactor later
@@ -45,7 +45,7 @@ export class PostJobComponent implements OnInit {
     private router: Router,
     private jobService: JobService,
     // public createJobListing : CreateJobListing,
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private nofication: NotificationService
   ) {
     // this.createJobForm();
