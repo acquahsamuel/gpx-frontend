@@ -10,15 +10,12 @@
 					</p>
 				</div>
 				<div class="response">
-					<p>
-						{{msg.response}}
-					</p>
+					<p class="response" [innerHTML]="renderDescription(msg.response)"></p>
 				</div>
 			</div>
 		</div>
 
-		
-
+    
 		<!-- Typing container -->
 		<div class="typing-container">
 			<div class="typing-content">

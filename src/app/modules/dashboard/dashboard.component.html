@@ -26,11 +26,28 @@
 						class="user-image"
 						alt="profile image">
 					<mat-menu #menu="matMenu">
-						<button (click)="logout()"
-							mat-menu-item>
-							Logout
+						
+						<a (click)="logout()" mat-menu-item>
+							<mat-icon> dashboard </mat-icon>
+							My Notes
+						</a>
+
+						<a (click)="logout()" mat-menu-item> 
+							<mat-icon>turned_in_not</mat-icon>
+							Customize ChatGPT
+						</a>
+					
+						<a (click)="logout()" mat-menu-item> 
+							<mat-icon>settings</mat-icon>
+							Settings
+						</a>
+
+						<hr class="hr-r">
+						<a (click)="logout()" mat-menu-item> 
 							<mat-icon>power_settings_new</mat-icon>
-						</button>
+							Logout
+						</a>
+
 					</mat-menu>
 				</div>
 			</div>
@@ -40,7 +57,7 @@
 		<mat-drawer #drawer
 			class="dashboard-sidenav"
 			mode="side"
-			opened>
+			>
 
 			<!-- <button (click)="drawer.toggle()"
 			type="button"
