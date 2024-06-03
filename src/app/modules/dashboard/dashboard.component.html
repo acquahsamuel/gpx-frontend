@@ -39,10 +39,10 @@
 
 		<mat-drawer #drawer
 			class="dashboard-sidenav"
-			mode="over"
+			mode="side"
 			opened>
 
-			<button (click)="drawer.toggle()"
+			<!-- <button (click)="drawer.toggle()"
 			type="button"
 			mat-button>
 			<mat-icon aria-hidden="false"
@@ -50,7 +50,7 @@
 				aria-label="Example home icon">
 				menu
 			</mat-icon>
-		    </button>
+		    </button> -->
 
 			<div class="sidebar-wrapper">
 				<div *ngFor="let link of links" class="link-container"	routerLinkActive="div-active">	
