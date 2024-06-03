@@ -7,7 +7,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "start:server": "node server.js",
-    "build": "ng build --prod ",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development"
   },
   "private": true,
