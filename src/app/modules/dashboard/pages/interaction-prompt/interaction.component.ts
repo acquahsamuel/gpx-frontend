@@ -2,9 +2,12 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 
 let PROMPT = [
   {
-    prompt: "Prompt Engineer",
-    response: `
-    Prompt engineering is a crucial concept in the field of artificial intelligence (AI) and natural language processing (NLP), particularly when working with large language models like GPT (Generative Pre-trained Transformer) developed by OpenAI. It involves crafting and optimizing prompts (input queries) to elicit desired responses from an AI model. Here's a more detailed explanation`,
+    prompt: "You have a nice idea. Prompt me let's discuss",
+    response: `I'm Samuel, an exploratory software engineer. I build exact UI clones with HTML and CSS. I sometimes use frameworks, with Angular being my preferred choice. I'm currently not looking for a new role, but I can contribute to your project to enhance my skills. Let's connect.`,
+  },
+  {
+    prompt: "Who is a Prompt Engineer?",
+    response: `Prompt engineering is a crucial concept in the field of artificial intelligence (AI) and natural language processing (NLP), particularly when working with large language models like GPT (Generative Pre-trained Transformer) developed by OpenAI. It involves crafting and optimizing prompts (input queries) to elicit desired responses from an AI model. Here's a more detailed explanation`,
   },
   {
     prompt: "Parsed html rendered",
@@ -53,12 +56,7 @@ let PROMPT = [
       <td>Italy</td>
     </tr>
   </table>`,
-  },
-  {
-    prompt: "Render html let see",
-    response: `<p style="color: white;font-family: cursive;font-size: 50px;text-align: center;">This is a website template, comment please :) </p>
-    <p style="color: white;font-family: edwardian script itc;font-size: 50px;text-align: left;"> Made by : Mia Woods</p>`,
-  },
+  }
 ];
 
 @Component({
