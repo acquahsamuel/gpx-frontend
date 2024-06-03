@@ -78,12 +78,21 @@ export class SignupComponent implements OnInit {
     return this.signUpForm.controls;
   }
 
+
+
+  register(){
+    this.router.navigateByUrl('/interaction');
+  }
+
+
   /**
    * @description handles signup
    * @returns
    */
   signUp() {
     console.log(this.signUpForm.value);
+
+
     if (this.signUpForm.valid) {
       this.state.verifyingCredentials = true;
 

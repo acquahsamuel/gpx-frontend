@@ -97,7 +97,6 @@
 }
 
 .mat-toolbar-nav-right {
-  // background-color: black;
   padding: 0.8rem 1.3rem;
   color: black;
 }
@@ -105,7 +104,8 @@
 .user-image {
   border-radius: 600px;
   height: 2rem;
-  width: 1.8rem;
+  border: 2px solid rgb(158, 155, 155);
+  display: inline-block;
 }
 
 .link-container {

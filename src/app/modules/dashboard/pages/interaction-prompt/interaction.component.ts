@@ -38,7 +38,7 @@ let PROMPT = [
 })
 
 
-export class TestDemoComponent implements OnInit {
+export class InteractionComponent implements OnInit {
 
   opened : Boolean = true;
   MESSAGE_ENGAGEMENT = PROMPT;

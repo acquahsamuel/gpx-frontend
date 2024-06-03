@@ -2,9 +2,9 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuardService } from 'src/app/shared/services/auth-guard.service';
 import { DashboardComponent } from './dashboard.component';
-import { PostJobComponent } from './pages/post-job/post-job.component';
+// import { PostJobComponent } from './pages/post-job/post-job.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { TestDemoComponent } from './pages/interaction-prompt/test-demo.component';
+import { InteractionComponent } from './pages/interaction-prompt/interaction.component';
  
 const routes: Routes = [
   {
@@ -13,14 +13,10 @@ const routes: Routes = [
     children: [
       {
         path : '',
-        component : TestDemoComponent
+        component : InteractionComponent
       },
       {
-        path: 'post-job',
-        component: PostJobComponent,
-      },
-      {
-        path: 'profile',
+        path: 'settings',
         component: ProfileComponent,
       },
     ],

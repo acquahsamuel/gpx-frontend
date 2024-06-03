@@ -41,6 +41,12 @@ export class LoginComponent implements OnInit {
     // this.currentLoggedUser();
   }
 
+
+
+  login(){
+    this.router.navigateByUrl('/interaction');
+  }
+
   /**
    * @description handles login
    * @returns
