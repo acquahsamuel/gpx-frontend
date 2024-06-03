@@ -40,6 +40,13 @@
 
   .response {
     margin-bottom: 0.4rem;
+    display: flex;
+    width: 100%;
+
+    img{
+      margin-right: 10px;
+      // color: white;
+    }
 
     p {
       line-height: 26px;
@@ -78,87 +85,6 @@
     color: black;
     border-radius: 50px;
   }
-}
-
-/* Chats container styling */
-.chat-container {
-  overflow-y: auto;
-  max-height: 100vh;
-  padding-bottom: 70px;
-}
-
-:where(.chat-container, textarea)::-webkit-scrollbar {
-  width: 6px;
-}
-
-:where(.chat-container, textarea)::-webkit-scrollbar-track {
-  background: var(--incoming-chat-bg);
-  border-radius: 25px;
-}
-
-:where(.chat-container, textarea)::-webkit-scrollbar-thumb {
-  background: var(--icon-color);
-  border-radius: 25px;
-}
-
-.chat-container .chat {
-  padding: 25px 10px;
-  display: flex;
-  justify-content: center;
-  color: var(--text-color);
-}
-
-.chat-container .chat.outgoing {
-  background: var(--outgoing-chat-bg);
-  border: 1px solid var(--outgoing-chat-border);
-}
-.chat-container .chat.incoming {
-  background: var(--incoming-chat-bg);
-  border: 1px solid var(--incoming-chat-border);
-}
-
-.chat .chat-content {
-  display: flex;
-  max-width: 1200px;
-  width: 100%;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-span.material-symbols-rounded {
-  user-select: none;
-  cursor: pointer;
-}
-.chat .chat-content span {
-  cursor: pointer;
-  font-size: 1.3rem;
-  color: var(--icon-color);
-  visibility: hidden;
-}
-
-.chat:hover .chat-content:not(:has(.typing-animation), :has(.error)) span {
-  visibility: visible;
-}
-
-.chat .chat-details {
-  display: flex;
-  align-items: center;
-}
-
-.chat .chat-details p {
-  white-space: pre-wrap;
-  font-size: 1.05rem;
-  padding: 0 50px 0 25px;
-  color: var(--text-color);
-  word-break: break-word;
-}
-
-.chat .chat-details p.error {
-  color: #e55865;
-}
-.chat .typing-animation {
-  padding-left: 25px;
-  display: inline-flex;
 }
 
 .mat-typography p {
@@ -211,7 +137,6 @@ span.material-symbols-rounded {
   position: absolute;
   right: 0;
   bottom: 0;
-  /* visibility: hidden; */
 }
 
 .typing-textarea textarea:valid ~ span {
@@ -281,12 +206,9 @@ span.material-symbols-rounded {
     justify-content: center;
     width: 58rem;
   }
-
-
 }
 
-
-.getting-started{
+.getting-started {
   border: 1px solid greenyellow;
 
   display: flex;
@@ -295,16 +217,14 @@ span.material-symbols-rounded {
   align-items: center;
   height: 70vh;
 
-
-  .getting-started-card{
-
+  .getting-started-card {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 
-    .cards{
-       border: 1px solid greenyellow;
-       width: 25rem;
+    .cards {
+      border: 1px solid greenyellow;
+      width: 25rem;
     }
   }
 }

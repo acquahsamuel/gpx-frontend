@@ -1,6 +1,5 @@
 <section class="main-content">
 	<div class="interaction-page">
-
 		
 	   <div class="content-view-cover" *ngIf="MESSAGE_ENGAGEMENT; else GETTING_STARTED">
 			<div class="content-view" *ngFor="let msg of MESSAGE_ENGAGEMENT">
@@ -9,7 +8,10 @@
 						{{msg.prompt}}
 					</p>
 				</div>
-				<div class="response">
+				<div class="response">		
+					<img [src]="userProfile"
+						class="user-image"
+						alt="profile image">
 					<p class="response" [innerHTML]="renderDescription(msg.response)"></p>
 				</div>
 			</div>

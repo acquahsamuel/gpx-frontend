@@ -70,13 +70,8 @@ let PROMPT = [
 export class InteractionComponent implements OnInit {
   opened: Boolean = true;
   MESSAGE_ENGAGEMENT = PROMPT;
-
-  // renderDescription(template: any) {
-  //   // template.innerHTML = PROMPT[0].response;
-  //   template.innerHTML = PROMPT[0].response?.toString();
-  //   // template.innerHTML = this.MESSAGE_ENGAGEMENT.jobDescription.toString();
-  // }
-
+  userProfile = './assets/icons/chatgpt-6.svg';
+ 
   renderDescription(response: string): string {
     return response;
   }

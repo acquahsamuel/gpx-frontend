@@ -44,25 +44,20 @@ export class DashboardComponent implements OnInit {
       "Chase your passions, not your problems",
       "Software Engineer leads with code",
       "Life is short, make it memorable",
-      "Stars can't shine without darkness",
-      "Software Engineer crafts elegant solutions",
-      "Software Engineer optimizes for performance",
-      "Software Engineer debugs with expertise"
+      "Chase your passions",
+      "Software Engineer leads with code"
       ]
     },
     { 
       day : "Weds",
       promptMessages : [
       "Software Engineer is grew", 
+      "Chase your passions",
+      "Software Engineer leads with code",
       "The world is full of magic, waiting for you to discover",
       "Chase your passions, not your problems",
       "Software Engineer leads with code",
-      "Life is short, make it memorable",
-      "Stars can't shine without darkness",
-      "Software Engineer crafts elegant solutions",
-      "Software Engineer optimizes for performance",
-      "Software Engineer debugs with expertise",
-  
+      "Life is short, make it memorable"
       ]
     },
     { 
@@ -77,7 +72,6 @@ export class DashboardComponent implements OnInit {
       "Software Engineer crafts elegant solutions",
       "Software Engineer optimizes for performance",
       "Software Engineer debugs with expertise",
-  
       ]
     },
     { 
@@ -88,33 +82,7 @@ export class DashboardComponent implements OnInit {
       "Chase your passions, not your problems",
       "Software Engineer leads with code",
       "Life is short, make it memorable",
-      "Stars can't shine without darkness",
-      "Software Engineer crafts elegant solutions",
-      "Software Engineer optimizes for performance",
-      "Software Engineer debugs with expertise",
-      ]
-    },
-
-    { 
-      day : "Monday",
-      promptMessages : [
-        "Kindness is always fashionable",
-        "In every moment, find a reason to smile",
-        "The world is full of magic, waiting for you to discover",
-        "Chase your passions, not your problems",
-        "Life is short, make it memorable",
-        "Stars can't shine without darkness",
-        "Believe you can, and you're halfway"
-      ]
-    },
-    { 
-      day : "Monday",
-      promptMessages : [
-        "Software Engineer automates for efficiency",
-        "Software Engineer collaborates across disciplines",
-        "Software Engineer communicates through code",
-        "Software Engineer problem-solves with logic",
-        "Last one"
+      "Explode"
       ]
     }
   ];
