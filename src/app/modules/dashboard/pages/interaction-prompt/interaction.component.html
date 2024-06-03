@@ -1,22 +1,23 @@
 <section class="main-content">
 	<div class="interaction-page">
 
-		<div class="content-view" *ngFor="let msg of MESSAGE_ENGAGEMENT">
-			<div class="message">
-				<p>
-					{{msg.prompt}}
-				</p>
-			</div>
-			<div class="response">
-				<p>
-					{{msg.response}}
-				</p>
+		
+	   <div class="content-view-cover">
+			<div class="content-view" *ngFor="let msg of MESSAGE_ENGAGEMENT">
+				<div class="message" >
+					<p>
+						{{msg.prompt}}
+					</p>
+				</div>
+				<div class="response">
+					<p>
+						{{msg.response}}
+					</p>
+				</div>
 			</div>
 		</div>
 
-		 
-
-		<!-- <div class="chat-container"></div> -->
+		
 
 		<!-- Typing container -->
 		<div class="typing-container">
@@ -25,7 +26,7 @@
 					<textarea id="chat-input"
 					 
 						spellcheck="false"
-						placeholder="Message LensGPT"
+						placeholder="Message GPX"
 						required></textarea>
 
 					<span class="send-btn"

@@ -17,6 +17,8 @@
   width: inherit;
 }
 
+
+
 .mat-toolbar-nav-left {
   display: flex;
   justify-content: space-between;
@@ -42,6 +44,7 @@
   background: #131212;
   color: white;
   overflow-x: hidden;
+  box-shadow: none !important;
 }
 
 
